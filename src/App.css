@@ -1,38 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+.dark body {
+  background-color: #121212;
+  color: #eee;
+}
+
 .App {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1d3557;
+  transition: color 0.3s;
+}
+
+.dark .navbar a {
+  color: #a8dadc;
+}
+
+.navbar a:hover {
+  color: #e63946;
+}
+
+h1.highlight {
   text-align: center;
+  color: #e63946;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+  margin-bottom: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page h2 {
+  color: #1d3557;
+  border-bottom: 2px solid #1d3557;
+  padding-bottom: 5px;
+}
+
+.dark h2 {
+  color: #a8dadc;
+  border-color: #a8dadc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.servicos li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.formulario {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 12px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  background-color: #1d3557;
   color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.formulario button:hover {
+  background-color: #457b9d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.dark .footer {
+  border-color: #444;
 }
